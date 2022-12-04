@@ -31,6 +31,9 @@ int busca(char nomeArq[], int l){//procura uma linha em um arquivo (arquivo com 
 int ArquivoInvertido(char nomeArq[], char Arq2[], int L1, int L2){
   FILE *arquivo, *novo;
   int cont=1, n, l=L2;
+  //cont - contador de linhas
+  //n - números sendo lidos no arquivo
+  //l - linha que vai ser usada no busca e alterada -> L2 não pode ser alterada
 
   arquivo=fopen(nomeArq,"r");
   novo=fopen(Arq2,"w");

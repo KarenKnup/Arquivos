@@ -24,3 +24,4 @@ main 14 - Desenvolver uma função que, dado um arquivo texto contendo números,
 main 15 - Faça uma função que, dado um arquivo A contendo números reais, um por linha, crie um novo arquivo B contendo os mesmos elementos de A, porém ordenados decrescentemente e sem repetição - versão 2 <br>
 main 16 - Remover número de arquivo. <br>
 main 17 - Busca em uma linha do arquivo<br>
+main 18 - Inverter números entre 2 linhas do arquivo <br>

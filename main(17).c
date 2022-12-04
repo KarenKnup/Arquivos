@@ -3,7 +3,7 @@
 #define TRUE 0
 #define FALSE 1
 
- int busca(char nomeArq[], int l){
+ int busca(char nomeArq[], int l){//Arquivos com 1 número/caractere por linha
   FILE *arq;
   int n, cont=1;
 

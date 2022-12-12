@@ -25,3 +25,4 @@ main 15 - Faça uma função que, dado um arquivo A contendo números reais, um 
 main 16 - Remover número de arquivo. <br>
 main 17 - Busca em uma linha do arquivo<br>
 main 18 - Inverter números entre 2 linhas do arquivo <br>
+main 19 - Verifica se todos os elementos de um arquivo A estão no arquivo B - Busca número em um arquivo <br>

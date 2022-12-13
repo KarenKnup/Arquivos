@@ -28,23 +28,26 @@ int busca(char nomeArq[], int l){//procura uma linha em um arquivo (arquivo com 
   }
 }
 
-int ArquivoInvertido(char nomeArq[], char Arq2[], int L1, int L2){
-  FILE *arquivo, *novo;
+int ArquivoInvertido(char nomeArq[], int L1, int L2){
+  char temporario[50]="tempo";
+  FILE *arquivo, *temp;
   int cont=1, n, l=L2;
   //cont - contador de linhas
   //n - números sendo lidos no arquivo
   //l - linha que vai ser usada no busca e alterada -> L2 não pode ser alterada
 
   arquivo=fopen(nomeArq,"r");
-  novo=fopen(Arq2,"w");
+  temp=fopen(temporario,"w");
 
-  if ((!arquivo) || (!novo)){
+  if ((!arquivo) || (!temp)){
     return FALSE;
   } else {
     while (fscanf(arquivo,"%d",&n)!=EOF){//transferindo os elementos entre L1 e L2 para "novo"
       if(cont>=L1 && cont<=L2){
-        fprintf(novo,"%d\n",busca(nomeArq,l));
+        fprintf(temp,"%d\n",busca(nomeArq,l));
         l--;
+      } else {
+        fprintf(temp,"%d\n",n);
       }
       cont++;
     }
@@ -53,27 +56,36 @@ int ArquivoInvertido(char nomeArq[], char Arq2[], int L1, int L2){
       return FALSE;
     }
     
-    fclose(novo);
+    fclose(temp);
     fclose(arquivo);
   } 
+
+  
+  arquivo=fopen(nomeArq,"w+");//w+ sobrescreve
+  temp=fopen(temporario,"r");
+
+  while (fscanf(temp,"%d",&n)!=EOF){//passa o que está no temporário de volta para o arquivo
+    fprintf(arquivo,"%d\n",n);
+  }
+
+  fclose(temp);
+  fclose(arquivo);
   
   return TRUE;
 }
 
 int main(void) {
-  char nomeArquivo[50], Arq2[50];
+  char nomeArquivo[50];
   int L1, L2;
 
   printf("\nArquivo a ser lido: ");
   scanf(" %[^\n]",nomeArquivo);
-  printf("Novo arquivo: ");
-  scanf(" %[^\n]",Arq2);
   printf("L1: ");
   scanf("%d",&L1);
   printf("L2: ");
   scanf("%d",&L2);
 
-  if (ArquivoInvertido(nomeArquivo,Arq2,L1,L2)==TRUE){
+  if (ArquivoInvertido(nomeArquivo,L1,L2)==TRUE){
     printf("\n\tSucesso~");
   } else {
     printf("\n\t\tERRO!");

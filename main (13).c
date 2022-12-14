@@ -97,6 +97,35 @@ int ArqSemRepet (char nomeArqA[]){
   return TRUE;
 }*/
 
+/* VERIFICA SE TEM REPETIÇÕES NO ARQUIVO:
+int VerificaRepet (char nomeArq[]){
+	FILE *arquivo;
+  int n1, n2;
+
+   arquivo=fopen(nomeArq,"r");
+
+  if(!arquivo){
+    return FALSE;
+  } else {
+    //lendo o primeiro número do arquivo
+		fscanf (arquivo, "%d", &n1);
+    
+    //lendo os demais valores
+		while (fscanf(arquivo,"%d",&n2)!=EOF){
+			if(n1==n2){
+			  return FALSE;
+			}
+			//atualizando o valor de 'num1'
+				n1 = n2;	
+		} 
+		
+		fclose(arquivo);
+  }
+
+  return TRUE;
+}
+*/
+
 //main
 int main (void){
 	char nomeArquivoA[50], nomeArquivoB[50];

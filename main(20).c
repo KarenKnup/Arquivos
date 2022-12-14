@@ -72,6 +72,14 @@ int Verifica (char arq[], char arqA[]){//Quantos elementos em comum entre esses 
       //Contando os elementos em comum entre os 2 arquivos -- compara cada n1 de arq com todos n2 de arqA
 		
 		  while (fscanf(arquivo,"%d",&n)!=EOF){
+			  /* while ( fscanf(arquivo1, "%d", &n1) != EOF ){
+      while ( fscanf(arquivo2, "%d", &n2) != EOF ){
+        if (n1 == n2){
+          cont++;
+        }
+      }
+      rewind(arquivo2);
+    } */
   			if(busca(arqA,n)==TRUE){
           cont++;
         }		

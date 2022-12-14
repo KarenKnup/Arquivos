@@ -50,6 +50,53 @@ int Func (char nomeArqA[], char nomeArqB[]){
 	}
 }
 
+/*   ORGANIZA UM ARQUIVO, TIRANDO AS REPETIÇÕES:
+
+int ArqSemRepet (char nomeArqA[]){
+  char temp[50]="tempo";
+	FILE *arquivo, *temporario;
+	int n1, n2;
+	
+	arquivo=fopen(nomeArqA,"r");
+	temporario=fopen(temp,"w");
+	
+	if ((!arquivo) || (!temporario)){
+		fclose(arquivo);
+		fclose(temporario);
+			return FALSE;
+	} else {
+		//lendo o primeiro número do arquivo
+		fscanf (arquivo, "%d", &n1);
+    fprintf(temporario,"%d\n",n1);
+		
+		//lendo os demais valores
+		while (fscanf(arquivo,"%d",&n2)!=EOF){
+			if(n1!=n2){
+				fprintf(temporario,"%d\n",n2);
+				
+				//atualizando o valor de 'num1'
+				n1 = n2;	
+			}
+			
+		} 
+		
+		fclose(arquivo);
+		fclose(temporario);
+	}
+
+    arquivo=fopen(nomeArqA,"w+");//w+ sobrescreve
+    temporario=fopen(temp,"r");
+  
+    while (fscanf(temporario,"%d",&n1)!=EOF){//passa o que está no temporário de volta para o arquivo
+      fprintf(arquivo,"%d\n",n1);
+    }
+  
+    fclose(temporario);
+    fclose(arquivo);
+  
+  return TRUE;
+}*/
+
 //main
 int main (void){
 	char nomeArquivoA[50], nomeArquivoB[50];

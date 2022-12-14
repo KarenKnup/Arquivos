@@ -26,3 +26,4 @@ main 16 - Remover número de arquivo. <br>
 main 17 - Busca em uma linha do arquivo<br>
 main 18 - Inverter números entre 2 linhas do arquivo <br>
 main 19 - Verifica se todos os elementos de um arquivo A estão no arquivo B - Busca número em um arquivo <br>
+main 20 - Verifica, em 2 arquivos sem repetição, quantos elementos eles têm em comum. <br>

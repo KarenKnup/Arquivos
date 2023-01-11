@@ -111,8 +111,6 @@ int main(void) {
   } else{
     posB=totalLinhas(nomeArq);//Nota 4
   }
-
- 
   
     if(Remove(nomeArq,posA,posB)==TRUE){
       printf("\n\n\tRemoção feita com sucesso!");

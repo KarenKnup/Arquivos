@@ -29,3 +29,4 @@ main 19 - Verifica se todos os elementos de um arquivo A estão no arquivo B - B
 main 20 - Verifica, em 2 arquivos sem repetição, quantos elementos eles têm em comum. <br>
 main 21 - Encontrar os 2 maiores valores no arquivo. <br>
 main 22 - Encontrar os 2 menores valores no arquivo. <br>
+main 23 - Remover os números entre as posições A e B. <br>

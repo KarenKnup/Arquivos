@@ -116,7 +116,7 @@ int main(void) {
   } 
 
   if(busca(nomeArq,posB)==FALSE){
-    posB=totalLinhas(nomeArq);
+    posB=totalLinhas(nomeArq); //Nota 4
   }
   
     if(Remove(nomeArq,posA,posB)==TRUE){

@@ -106,10 +106,17 @@ int main(void) {
   printf("Posição B: ");
   scanf("%d",&posB);
 
-  if(busca(nomeArq,posA)==FALSE && busca(nomeArq,posB)==TRUE){
+   while(posA>posB){
+     printf("A posição A deve ser menor que B! Posição B: ");
+      scanf("%d",&posB);
+   }
+
+   if(busca(nomeArq,posA)==FALSE && busca(nomeArq,posB)==TRUE){
     posB=posA;//Nota 3
-  } else{
-    posB=totalLinhas(nomeArq);//Nota 4
+  } 
+
+  if(busca(nomeArq,posB)==FALSE){
+    posB=totalLinhas(nomeArq);
   }
   
     if(Remove(nomeArq,posA,posB)==TRUE){

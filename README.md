@@ -3,9 +3,9 @@
 
 <h3>Sobre / About</h3>
 
-`O manuseio de arquivos refere-se à leitura, gravação e alteração de dados em arquivos.`
+`O manuseio de arquivos refere-se à leitura, gravação, exclusão e alterações em arquivos.`
 
-`File handling refers to reading, writing, and changing data in files.`
+`File handling refers to reading, writing, deleting, and making changes in files.`
 </div>
 
 Arquivo | Conteúdo

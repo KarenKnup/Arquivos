@@ -1,5 +1,12 @@
 <div align="center">
-<h1>Arquivos (FILES)</h1><br><br> </div>
+<h1>Arquivos (FILES)</h1>
+
+<h3>Sobre / About</h3>
+
+`O manuseio de arquivos refere-se à leitura, gravação e alteração de dados em arquivos.`
+
+`File handling refers to reading, writing, and changing data in files.`
+</div>
 
 Arquivo | Conteúdo
 --------|-----------
